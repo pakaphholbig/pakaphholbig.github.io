@@ -2,7 +2,8 @@
   const dialog = document.querySelector('#photo-preview');
   if (!dialog || typeof dialog.showModal !== 'function') return;
   const image = dialog.querySelector('img');
-  const caption = dialog.querySelector('figcaption');
+  const dish = dialog.querySelector('.preview-dish');
+  const restaurant = dialog.querySelector('.preview-restaurant');
   const close = dialog.querySelector('button');
   let opener;
   for (const link of document.querySelectorAll('.food-photo > a')) {
@@ -13,7 +14,9 @@
       opener = link;
       image.src = link.href;
       image.alt = link.querySelector('img').alt;
-      caption.textContent = [...link.parentElement.querySelector('figcaption').children].map(el => el.textContent).join(' · ');
+      const caption = link.parentElement.querySelector('figcaption');
+      dish.textContent = caption.children[0]?.textContent || '';
+      restaurant.textContent = caption.children[1]?.textContent || '';
       dialog.showModal();
       document.documentElement.classList.add('preview-open');
       close.focus();
@@ -21,8 +24,7 @@
   }
   close.addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => {
-    const box = dialog.getBoundingClientRect();
-    if (event.target === dialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) dialog.close();
+    if (event.target === dialog) dialog.close();
   });
   dialog.addEventListener('close', () => {
     document.documentElement.classList.remove('preview-open');
