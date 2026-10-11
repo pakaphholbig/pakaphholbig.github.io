@@ -39,6 +39,8 @@
     all.forEach(char => char.classList.add('typed'));
     cursor?.classList.remove('typing-cursor');
   }
+  // Stop character updates as soon as the user begins scrolling.
+  window.addEventListener('scroll', finish, { once: true, passive: true });
   motion.addEventListener('change', event => { if (event.matches) finish(); });
   async function type(chars, speed) {
     for (const char of chars) {
