@@ -133,3 +133,11 @@ nav{flex-wrap:wrap;justify-content:flex-end;gap:14px 28px}nav a{padding:6px 0}na
 .preview-dish{display:block;font-family:Georgia,serif;font-style:italic;font-size:23px}
 .preview-restaurant{display:block;margin-top:5px;font-size:11px;letter-spacing:.04em;color:#b9b8af}
 @media(max-width:640px){.photo-preview{padding:72px 16px 24px}.preview-close{top:16px;right:16px}.photo-preview img{max-height:calc(100vh - 182px);max-height:calc(100dvh - 182px)}.photo-preview figcaption{margin-top:16px}.preview-dish{font-size:21px}}
+
+/* On mobile, the food introduction and highlights come before the photos. */
+@media(max-width:640px){
+  .food-aside{display:contents}
+  #outside-work>.section-content{order:1}
+  #outside-work .food-gallery{order:2;margin-top:0}
+  #outside-work .food-gallery{width:100%;max-width:360px}
+}
