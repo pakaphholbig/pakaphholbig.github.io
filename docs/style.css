@@ -157,3 +157,5 @@ nav{flex-wrap:wrap;justify-content:flex-end;gap:14px 28px}nav a{padding:6px 0}na
 .food-reflection{margin-top:16px}.food-follow{margin-top:16px}
 
 .restaurant-list + .restaurant-note{margin-top:24px}
+
+.experience-list .body-copy + .body-copy{margin-top:16px}
