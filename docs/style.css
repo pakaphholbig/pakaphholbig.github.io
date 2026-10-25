@@ -99,13 +99,13 @@ nav{flex-wrap:wrap;justify-content:flex-end;gap:14px 28px}nav a{padding:6px 0}na
 .hero-title-group{width:fit-content;max-width:100%}.hero-credit{justify-content:flex-end;margin:12px 0 0}.hero-credit img{display:block;width:14px;height:14px}
 
 /* Keep the opening headline and biography visually connected. */
-.hero{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:36px;align-items:center}
+.hero{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:36px;align-items:center}
 .hero h1{font-size:clamp(40px,4.65vw,61px);line-height:1.12;letter-spacing:-.05em}
 .hero-heading-about{white-space:nowrap}
 .hero-heading-work{font-size:1em;margin-top:20px;line-height:1.12}
 .hero h1 em{font-size:1.08em;margin-left:.25em;letter-spacing:-.045em}
 .hero-bottom{border-top:0;padding:0;gap:23px}
-.hero-bottom p{font-size:14px;line-height:1.8}
+.hero-bottom p{font-size:14px;line-height:1.8;max-width:none}
 .hero-credit{font-size:9px;color:#77776f;margin-top:10px;gap:4px}
 .hero-credit img{width:12px;height:12px;opacity:.65}
 @media(max-width:900px) and (min-width:701px){.hero{gap:28px}.hero h1{font-size:clamp(32px,4.5vw,41px)}.hero-bottom p{font-size:13px}}
@@ -143,7 +143,7 @@ nav{flex-wrap:wrap;justify-content:flex-end;gap:14px 28px}nav a{padding:6px 0}na
 }
 
 /* Intro: personal note, biography, and a distinct research focus. */
-.intro-copy{width:100%;max-width:36ch}
+.intro-copy{width:100%;max-width:none}
 .hero-bottom .intro-name{font-size:20px;line-height:1.4;letter-spacing:-.5px;color:var(--ink);margin-bottom:18px}
 .intro-name strong{font-weight:400}.intro-name em{font-size:1.24em}
 .hero-bottom .intro-background{font-size:13px;line-height:1.8}
@@ -159,3 +159,229 @@ nav{flex-wrap:wrap;justify-content:flex-end;gap:14px 28px}nav a{padding:6px 0}na
 .restaurant-list + .restaurant-note{margin-top:24px}
 
 .experience-list .body-copy + .body-copy{margin-top:16px}
+
+/* Desktop opening: aligned introduction, compact contact details, separate interests. */
+header{height:88px}
+.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:72px;align-items:start;padding:52px 0 40px}
+.hero h1{font-size:clamp(34px,4vw,52px);line-height:1.1}
+.hero-heading-work{margin-top:16px}
+.hero-title-group{width:100%}
+.hero-credit{max-width:360px}
+.hero-bottom{padding-top:3px;gap:24px}
+.hero-bottom .intro-name{font-size:25px;line-height:1.4;margin-bottom:22px}
+.hero-bottom .intro-background,.hero-bottom .intro-personal{font-size:15px;line-height:1.75}
+.hero-bottom .intro-personal{margin-top:16px}
+.hero-contact{margin-top:28px;font-size:11px;line-height:1.6}
+.hero-contact dl{margin:0}
+.hero-contact dl>div{display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px;margin-top:5px}
+.hero-contact dt{color:var(--muted)}.hero-contact dd{margin:0;overflow-wrap:anywhere}
+.hero-socials{display:flex;gap:22px;margin-top:13px}.hero-socials a{padding:4px 0}
+.research-interests{border-top:1px solid var(--line);padding:25px 0 32px}
+.research-interests>h2{font-size:11px;color:var(--muted);margin-bottom:18px}
+.interest-columns{display:grid;grid-template-columns:1.1fr 1fr;gap:72px}
+.interest-columns h3{font-size:21px;letter-spacing:-.5px;font-weight:600;margin:0 0 10px}
+.interest-columns p{font-size:14px;line-height:1.75;color:var(--muted);margin:0}
+.interest-connect{font-size:12px;color:var(--muted);margin:20px 0 0}
+@media(min-width:701px) and (max-width:1000px){.hero,.interest-columns{gap:36px}.hero h1{font-size:clamp(30px,4vw,40px)}.hero-bottom .intro-name{font-size:22px}}
+@media(max-width:700px){.hero{grid-template-columns:1fr;gap:32px;padding:36px 0}.hero h1{font-size:clamp(32px,7.7vw,48px)}.hero-title-group{max-width:440px}.hero-credit{max-width:none}.hero-bottom .intro-name{font-size:23px}.hero-bottom .intro-background,.hero-bottom .intro-personal{font-size:14px}.interest-columns{grid-template-columns:1fr;gap:24px}.research-interests{padding:25px 0 32px}.hero-contact{font-size:11px}.hero-contact dl>div{grid-template-columns:62px minmax(0,1fr);gap:8px}}
+
+/* Review: name-led introduction and visible project summaries. */
+.hero{grid-template-areas:"title bio" "contact bio";grid-template-rows:auto auto;column-gap:72px;row-gap:26px;padding:48px 0}
+.hero-title-group{grid-area:title}.hero-bottom{grid-area:bio;padding-top:37px}.hero-contact{grid-area:contact;margin:0}
+.intro-eyebrow{font-size:14px;color:var(--muted);margin:0 0 16px}
+.hero h1{font-size:clamp(40px,4.4vw,58px);line-height:1.06;letter-spacing:-.045em}
+.name-nickname{display:block;font-size:.72em;margin-top:12px}.hero h1 em{margin:0;font-size:1.1em}
+.hero-credit{font-size:10px;text-align:left;margin-top:16px}
+.hero-bottom .intro-background,.hero-bottom .intro-personal,.interest-columns p,.body-copy,.degree>p,.project-more p{font-size:16px;line-height:1.7}
+.hero-contact{font-size:13px}.hero-contact dl>div{grid-template-columns:76px minmax(0,1fr);gap:10px;margin-top:6px}
+.hero-socials a{min-height:44px;display:inline-flex;align-items:center}.hero-socials{margin-top:8px}
+nav{font-size:14px;gap:24px}nav a{min-height:44px;display:inline-flex;align-items:center}
+.research-interests>h2,.interest-connect,.section-label,h2,.education-location,.degree-heading>span,.experience-date,.eyebrow-label{font-size:13px}
+.work{grid-template-columns:1fr;gap:20px}.work .large-copy{font-size:36px;margin-bottom:28px}
+.project-card{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+.project-card:last-child{border-bottom:1px solid var(--line)}
+.project-card .project-number{font-size:12px;padding-top:3px}
+.project-meta{font-size:13px;color:var(--muted);margin:0 0 8px;line-height:1.5}
+.project-overview h3{font-size:22px;font-weight:500;letter-spacing:-.4px;line-height:1.3;margin:0 0 8px}
+.project-description{font-size:16px;line-height:1.6;color:var(--muted);margin:0}
+.project-card .project-links{margin:0;align-self:start;font-size:14px;max-width:150px}
+.project-links a{min-height:44px;display:inline-flex;align-items:center;gap:6px;line-height:1.5}
+.project-more summary{display:list-item;list-style:disclosure-closed;font-size:13px;color:var(--muted);padding:12px 0;min-height:44px}
+.project-more[open] summary{list-style:disclosure-open}.project-more summary::-webkit-details-marker{display:inline}
+.project-more p{color:var(--muted);margin:0 0 8px;max-width:65ch}
+@media(max-width:900px) and (min-width:701px){.hero{column-gap:36px}.hero-contact dl>div{grid-template-columns:1fr;gap:0;margin-top:10px}}
+@media(max-width:700px){.hero{grid-template-areas:"title" "bio" "contact";grid-template-columns:1fr;gap:26px;padding:32px 0 36px}.hero h1{font-size:clamp(40px,10vw,58px)}.hero-bottom{padding:0}.hero-bottom .intro-copy{max-width:none}.hero-bottom .intro-background,.hero-bottom .intro-personal{font-size:16px}.hero .circle-link{display:none}.hero-contact{border-top:1px solid var(--line);padding-top:20px;font-size:13px}.hero-contact dl>div{grid-template-columns:76px minmax(0,1fr);gap:8px}.hero-credit{font-size:10px}.project-card{grid-template-columns:20px minmax(0,1fr);gap:10px 14px}.project-card .project-links{grid-column:2;max-width:none}.project-overview h3{font-size:20px}.work .large-copy{font-size:30px}nav{width:100%;justify-content:space-between;gap:4px;font-size:13px}header{padding:14px 0;min-height:72px;height:auto}.project-description{font-size:16px}}
+
+/* Personal details and restrained hover feedback. */
+.name-nickname em{position:relative;isolation:isolate}
+.name-nickname em::before{content:"";position:absolute;z-index:-1;left:-.07em;right:-.06em;bottom:.08em;height:.36em;background:var(--accent);border-radius:2px;transform:rotate(-2deg)}
+.intro-photo{width:180px;max-width:100%;margin:0;overflow:hidden;border-radius:3px}
+.intro-photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center 60%;transition:transform .5s ease}
+.project-card{transition:background-color .2s ease}
+.project-links .external-arrow{transition:transform .2s ease}
+@media(hover:hover) and (pointer:fine){.intro-photo:hover img{transform:scale(1.035)}.project-card:hover{background:#d5ec7614}.project-links a:hover .external-arrow{transform:translate(2px,-2px)}}
+.project-card:focus-within{background:#d5ec7614}
+@media(max-width:700px){.intro-photo{width:160px}.hero-bottom{gap:22px}}
+@media(prefers-reduced-motion:reduce){.intro-photo img,.project-links .external-arrow{transform:none!important;transition:none}.project-card{transition:none}}
+
+/* Education and experience follow the section heading without a side gutter. */
+.about{grid-template-columns:1fr;gap:28px}
+.about .body-copy,.about .degree>p{max-width:70ch}
+
+.intro-credit{font-size:11px;margin-left:6px;white-space:nowrap}
+
+/* Compact background: scan summaries, expand supporting details. */
+.about .experience-list li{padding:20px 0;gap:24px}
+.about .experience-list li:first-child{padding-top:0}
+.experience-summary{font-size:16px;line-height:1.65;color:var(--muted);margin:0}
+.about .experience-role{margin-bottom:8px}
+.background-detail summary{display:list-item;list-style:disclosure-closed;font-size:13px;color:var(--muted);min-height:44px;padding:12px 0}
+.background-detail summary::-webkit-details-marker{display:inline}
+.background-detail[open] summary{list-style:disclosure-open}
+.background-detail>p{font-size:16px;line-height:1.7;color:var(--muted);max-width:70ch;margin:0 0 12px}
+.about .education{margin:30px 0 0;padding:0;border:0}
+.about .education-location{margin:8px 0 20px}
+.about .degree-heading{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.about .degree-heading h4{margin:0}.about .degree-heading>span{white-space:nowrap}
+.about .degree+.degree{margin-top:12px}
+@media(max-width:700px){.about .degree-heading{display:block}.about .degree-heading>span{display:block;margin-top:4px}.about .experience-list li{gap:8px}}
+
+/* Lead with education in the background section. */
+.about .education{margin:0 0 28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+
+/* Keep the name and portrait together; bio and contact share the other column. */
+.hero{grid-template-areas:"title bio" "title contact";row-gap:24px}
+.hero-title-group .intro-photo{margin-top:24px}
+.hero-bottom{padding-top:37px}
+.hero-contact{align-self:start}
+@media(max-width:700px){.hero{grid-template-areas:"title" "bio" "contact"}.hero-bottom{padding-top:0}}
+
+.hero{grid-template-rows:min-content 1fr}
+@media(max-width:700px){.hero{grid-template-rows:auto}}
+
+/* Anchor desktop contact details to the bottom of the introduction. */
+@media(min-width:701px){.hero-contact{align-self:end}}
+
+.intro-credit img{display:inline-block;width:12px;height:12px;vertical-align:-2px;margin:0 2px;opacity:.65}
+
+@media(min-width:701px){.hero-bottom{padding-top:76px}}
+
+/* Distinguish entry separators from major section boundaries. */
+.section{border-top-color:#99998e}
+.about .experience-list li{border-bottom:0;position:relative}
+.about .experience-list li::after{content:"";position:absolute;bottom:0;left:149px;right:0;height:1px;background:var(--line)}
+@media(max-width:800px){.about .experience-list li::after{left:0}}
+
+.about .experience-list li:last-child::after{display:none}
+.about .experience-list li:last-child{padding-bottom:0}
+
+/* Use the next section border as the sole boundary after the final project. */
+.project-card:last-child{border-bottom:0;padding-bottom:0}
+
+/* Separate project indices from their metadata. */
+.project-card{column-gap:36px}
+@media(max-width:700px){.project-card{column-gap:20px}}
+
+/* Keep related biography and contact content in one naturally sized group. */
+.hero{grid-template-areas:"title bio";grid-template-rows:auto;column-gap:56px}
+.hero-bottom{align-self:center;padding-top:0;gap:32px;width:100%}
+.hero-bottom .hero-contact{width:100%;align-self:auto}
+@media(max-width:700px){.hero{grid-template-areas:"title" "bio"}.hero-bottom{gap:24px}}
+
+.hero-socials a{gap:8px}.hero-socials .social-icon{width:18px;height:18px;flex-shrink:0}
+
+/* A personal masthead with quiet navigation. */
+header{gap:24px;height:80px}
+.site-mark{font-family:Georgia,'Times New Roman',serif;font-size:29px;font-style:italic;letter-spacing:-1.5px;text-decoration:none;line-height:1;display:inline-flex;align-items:center;min-height:44px}
+.site-mark span{color:var(--ink);position:relative}.site-mark span::after{content:"";position:absolute;z-index:-1;background:var(--accent);width:12px;height:8px;bottom:0;left:-3px}
+.site-mark:hover{text-decoration:none}
+header nav{gap:28px;font-size:13px}header nav a{position:relative;text-decoration:none}
+header nav a::after{content:"";position:absolute;left:0;right:0;bottom:7px;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .18s ease}
+header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
+@media(max-width:700px){header{flex-wrap:nowrap;gap:16px;height:auto;min-height:76px;padding:12px 0}.site-mark{font-size:26px}header nav{width:auto;flex:1;gap:8px;justify-content:space-between;font-size:12px}}
+@media(max-width:360px){header{flex-wrap:wrap;gap:0}header nav{flex-basis:100%;margin:0}}
+
+/* Compact masthead: keep navigation grouped with the wordmark. */
+header{height:64px;justify-content:flex-start;gap:36px}
+header nav{margin-left:0;gap:24px}
+.hero{padding-top:32px}
+@media(max-width:700px){header{height:auto;min-height:64px;gap:18px;padding:8px 0}header nav{gap:8px}.hero{padding-top:28px}}
+@media(max-width:360px){header{gap:0}}
+
+.intro-honors{width:100%;border-top:1px solid var(--line);padding-top:18px}
+.intro-honors h2{font-size:12px;color:var(--muted);margin:0 0 8px}
+.hero-bottom .honors-award{font-size:18px;font-weight:600;color:var(--ink);line-height:1.4;margin:0 0 3px}
+.intro-honors a{display:inline-block;font-size:14px;line-height:1.6;padding:4px 0}
+.hero-bottom .honors-years{font-size:13px;line-height:1.6;margin-top:3px}
+.hero-bottom{gap:24px}
+
+/* Keep the interests copy compact with stronger contrast. */
+.interest-columns p{font-size:15px;color:var(--muted);line-height:1.7}
+
+.honors-date{font-size:13px;font-weight:400;color:var(--muted);white-space:nowrap}
+
+.hero-bottom .intro-background{font-size:15px}
+
+.hero-bottom .intro-background + .intro-background{margin-top:14px}
+
+/* Sparse marker accents connect key phrases to the nickname highlight. */
+.text-highlight{color:var(--ink);background:linear-gradient(transparent 58%,var(--accent) 58%,var(--accent) 94%,transparent 94%);padding:0 .05em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* Body emphasis uses weight; marker accents remain on display text. */
+.intro-background .text-highlight,.interest-columns .text-highlight{background:none;padding:0;color:var(--ink);font-weight:600}
+
+/* Small editorial details, using the existing paper and lime palette. */
+.hero-title-group .intro-photo{width:194px;padding:7px;background:#fffefb;border:1px solid var(--line);box-shadow:3px 4px 0 #2424210a;transform:rotate(-2deg);overflow:hidden;border-radius:2px;transition:transform .25s ease}
+.intro-photo img{border-radius:1px}
+.intro-honors{border-top:0;border-left:3px solid var(--accent);padding:2px 0 2px 16px}
+.interest-columns h3{display:flex;align-items:baseline;gap:12px}
+.interest-index{font:11px monospace;color:var(--muted);background:var(--accent);padding:4px 6px;letter-spacing:0;flex-shrink:0}
+@media(hover:hover) and (pointer:fine){.hero-title-group .intro-photo:hover{transform:rotate(0)}}
+@media(max-width:700px){.hero-title-group .intro-photo{width:174px}.interest-columns h3{gap:10px}}
+@media(prefers-reduced-motion:reduce){.hero-title-group .intro-photo{transform:none;transition:none}}
+
+/* Magazine treatment: photographic frame, serif subheads, fine column rules. */
+.hero-title-group .intro-photo{width:240px;padding:0;border:0;border-radius:0;box-shadow:none;transform:none;background:transparent}
+.hero-title-group .intro-photo img{border-radius:0;aspect-ratio:1;object-position:center 60%}
+.intro-eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.intro-credit{font-size:10px;letter-spacing:0;text-transform:none}
+.research-interests{padding-top:28px;padding-bottom:32px}
+.research-interests>h2{font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:24px}
+.interest-columns{gap:36px;grid-template-columns:1fr 1fr}
+.interest-columns>div+div{border-left:1px solid var(--line);padding-left:36px}
+.interest-columns h3{font-family:Georgia,'Times New Roman',serif;font-size:27px;font-weight:400;letter-spacing:-.7px;line-height:1.2;gap:14px;margin-bottom:16px}
+.interest-index{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:16px;color:var(--muted);background:none;padding:0}
+.interest-columns p{text-wrap:pretty}
+@media(max-width:700px){.hero-title-group .intro-photo{width:220px}.interest-columns{grid-template-columns:1fr;gap:26px}.interest-columns>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:24px}.interest-columns h3{font-size:26px}.intro-eyebrow{font-size:10px}}
+
+/* Opening spread: masthead, photograph and profile, then a contact colophon. */
+.magazine-opening{grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-areas:"title title" "photo bio" "contact contact";gap:30px 48px;padding:28px 0 36px;align-items:start}
+.magazine-opening .hero-title-group{max-width:none;padding-bottom:24px;border-bottom:1px solid var(--ink)}
+.magazine-opening .intro-eyebrow{display:flex;justify-content:flex-start;align-items:center;gap:10px;margin:0 0 24px}
+.magazine-opening h1{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;font-size:clamp(48px,5.5vw,72px);line-height:1;letter-spacing:-.055em;margin:0}
+.magazine-opening .opening-name{display:block}
+.magazine-opening .name-nickname{flex-shrink:0;margin:0 0 5px;font-size:34px;letter-spacing:-.045em;line-height:1.2}
+.magazine-opening .intro-photo{grid-area:photo;width:100%;max-width:none;margin:0;border:0;padding:0;border-radius:0;box-shadow:none;transform:none;background:none;overflow:visible}
+.magazine-opening .intro-photo img{width:100%;height:360px;aspect-ratio:auto;object-fit:cover;object-position:center 58%;border-radius:0}
+.magazine-opening .intro-photo figcaption{font-size:11px;line-height:1.5;color:var(--muted);margin-top:9px;font-family:Georgia,'Times New Roman',serif;font-style:italic}
+.magazine-opening .hero-bottom{align-self:start;align-items:stretch;gap:28px;padding:6px 0 0;max-width:none}
+.magazine-opening .intro-copy{max-width:none}
+.magazine-opening .hero-bottom .intro-background{font-size:16px;line-height:1.75}
+.magazine-opening .hero-bottom .intro-background+.intro-background{margin-top:22px;font-family:Georgia,'Times New Roman',serif;font-size:23px;line-height:1.4;color:var(--ink);letter-spacing:-.35px}
+.magazine-opening .intro-honors{padding:0;border:0}
+.magazine-opening .honors-award{font-size:16px}
+.magazine-opening .intro-honors a{font-size:13px}
+.magazine-opening .hero-contact{grid-area:contact;align-self:auto;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;align-items:start;gap:24px;width:100%;font-size:12px}
+.magazine-opening .hero-contact dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;flex:1;margin:0}
+.magazine-opening .hero-contact dl>div{display:block;margin:0}
+.magazine-opening .hero-contact dt{font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}
+.magazine-opening .hero-contact dd{line-height:1.6}
+.magazine-opening .hero-socials{flex-direction:column;gap:0;margin:0}
+.magazine-opening .hero-socials a{min-height:32px;padding:2px 0}
+.magazine-opening .hero-socials .social-icon{width:14px;height:14px}
+@media(min-width:701px) and (max-width:1000px){.magazine-opening{column-gap:30px}.magazine-opening h1{font-size:54px}.magazine-opening .name-nickname{font-size:28px}.magazine-opening .intro-photo img{height:390px}.magazine-opening .hero-contact{display:block}.magazine-opening .hero-socials{flex-direction:row;gap:24px;margin-top:12px}}
+@media(max-width:700px){.magazine-opening{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "photo" "bio" "contact";gap:24px;padding:24px 0 30px}.magazine-opening .hero-title-group{max-width:none;padding-bottom:20px}.magazine-opening .intro-eyebrow{font-size:9px;gap:8px;margin-bottom:20px}.magazine-opening .intro-credit{font-size:9px;margin-left:0}.magazine-opening h1{display:block;font-size:clamp(36px,9vw,60px)}.magazine-opening .name-nickname{font-size:30px;margin:16px 0 0}.magazine-opening .intro-photo img{height:auto;aspect-ratio:1.12;object-position:center 58%}.magazine-opening .hero-bottom{padding:0;gap:22px}.magazine-opening .hero-bottom .intro-background{font-size:15px}.magazine-opening .hero-bottom .intro-background+.intro-background{font-size:23px}.magazine-opening .hero-contact{display:block}.magazine-opening .hero-contact dl{display:block}.magazine-opening .hero-contact dl>div{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;margin:0 0 12px}.magazine-opening .hero-contact dt{margin:0;line-height:1.9}.magazine-opening .hero-socials{flex-direction:row;gap:24px;margin-top:12px}.magazine-opening .hero-socials a{min-height:44px}}
+
+/* Let the biography read as one consistent piece of text. */
+.magazine-opening .hero-bottom .intro-background+.intro-background{margin-top:16px;font-family:inherit;font-size:16px;line-height:1.75;color:var(--muted);letter-spacing:normal}
+@media(max-width:700px){.magazine-opening .hero-bottom .intro-background+.intro-background{font-size:15px}}

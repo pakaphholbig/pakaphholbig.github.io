@@ -2,7 +2,7 @@
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (motion.matches) return;
   const heading = document.querySelector('#intro-title');
-  const credit = document.querySelector('.hero-credit');
+  const credit = document.querySelector('.intro-credit');
   if (!heading || !credit) return;
 
   // Preserve the full accessible text and reserve each character's space.
@@ -26,7 +26,7 @@
     }
     return chars;
   }
-  const headingChars = prepare(heading, 'A little about me. A few things I’ve made.');
+  const headingChars = prepare(heading, heading.innerText.replace(/\s+/g, ' ').trim());
   const creditChars = prepare(credit, '(vibed by Codex)');
   const logo = credit.querySelector('img');
   logo.classList.add('typing-char');
@@ -53,13 +53,8 @@
   }
   async function play() {
     await wait(250);
-    await type([...heading.querySelectorAll('.hero-heading-about .typing-char')], 65);
-    await wait(450);
-    const lower = [...heading.querySelectorAll('.hero-heading-work > .typing-char')];
-    await type(lower, 55);
-    await wait(200);
-    await type([...heading.querySelectorAll('em .typing-char')], 75);
-    await wait(350);
+    await type(headingChars, 45);
+    await wait(180);
     await type(creditChars.slice(0, -1), 38);
     if (!stopped) logo.classList.add('typed');
     await type(creditChars.slice(-1), 38);
