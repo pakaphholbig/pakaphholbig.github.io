@@ -181,7 +181,7 @@ header{height:88px}
 .interest-columns{display:grid;grid-template-columns:1.1fr 1fr;gap:72px}
 .interest-columns h3{font-size:21px;letter-spacing:-.5px;font-weight:600;margin:0 0 10px}
 .interest-columns p{font-size:14px;line-height:1.75;color:var(--muted);margin:0}
-.interest-connect{font-size:12px;color:var(--muted);margin:20px 0 0}
+.interest-connect{font-size:12px;color:var(--muted);margin:0 0 20px}
 @media(min-width:701px) and (max-width:1000px){.hero,.interest-columns{gap:36px}.hero h1{font-size:clamp(30px,4vw,40px)}.hero-bottom .intro-name{font-size:22px}}
 @media(max-width:700px){.hero{grid-template-columns:1fr;gap:32px;padding:36px 0}.hero h1{font-size:clamp(32px,7.7vw,48px)}.hero-title-group{max-width:440px}.hero-credit{max-width:none}.hero-bottom .intro-name{font-size:23px}.hero-bottom .intro-background,.hero-bottom .intro-personal{font-size:14px}.interest-columns{grid-template-columns:1fr;gap:24px}.research-interests{padding:25px 0 32px}.hero-contact{font-size:11px}.hero-contact dl>div{grid-template-columns:62px minmax(0,1fr);gap:8px}}
 
@@ -311,7 +311,6 @@ header nav{margin-left:0;gap:24px}
 .hero-bottom .honors-award{font-size:18px;font-weight:600;color:var(--ink);line-height:1.4;margin:0 0 3px}
 .intro-honors a{display:inline-block;font-size:14px;line-height:1.6;padding:4px 0}
 .intro-honors > div + div{margin-top:10px}
-.intro-honors .honors-competition{font-size:14px;line-height:1.6;margin:0}
 .hero-bottom .honors-years{font-size:13px;line-height:1.6;margin-top:3px}
 .hero-bottom{gap:24px}
 
@@ -369,7 +368,7 @@ header nav{margin-left:0;gap:24px}
 .magazine-opening .hero-bottom .intro-background+.intro-background{margin-top:22px;font-family:Georgia,'Times New Roman',serif;font-size:23px;line-height:1.4;color:var(--ink);letter-spacing:-.35px}
 .magazine-opening .intro-honors{padding:0;border:0}
 .magazine-opening .honors-award{font-size:16px}
-.magazine-opening .intro-honors :is(a,.honors-competition){font-size:13px}
+.magazine-opening .intro-honors a{font-size:13px}
 .magazine-opening .hero-contact{grid-area:contact;align-self:auto;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;align-items:start;gap:24px;width:100%;font-size:12px}
 .magazine-opening .hero-contact dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;flex:1;margin:0}
 .magazine-opening .hero-contact dl>div{display:block;margin:0}
