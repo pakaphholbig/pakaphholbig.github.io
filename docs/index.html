@@ -15,18 +15,24 @@
     </header>
     <main id="main">
       <section class="hero magazine-opening" aria-labelledby="intro-title">
-        <div class="hero-title-group"><p class="intro-eyebrow">A little about me. <span class="intro-credit">(vibed by codex <img src="assets/codex.svg" width="12" height="12" alt="">)</span></p><h1 id="intro-title"><span class="opening-name">I’m Pakaphol<br>Thadawasin.</span><span class="name-nickname">I go by <em>Big.</em></span></h1>
+        <div class="hero-title-group"><p class="intro-eyebrow">A little about me.</p><h1 id="intro-title"><span class="opening-name">I’m Pakaphol<br>Thadawasin.</span><span class="name-nickname">I go by <em>Big.</em></span></h1>
         </div>
           <figure class="intro-photo"><img src="assets/big-with-cat.jpg" alt="Big sitting with a sleeping cat on his lap" width="900" height="1200" decoding="async"><figcaption>Away from the keyboard.</figcaption></figure>
         <div class="hero-bottom">
           <div class="intro-copy">
-            <p class="intro-background">Born and raised in Bangkok, Thailand. I spent my college years in Cambridge, MA, earning a BS and MEng in computer science at MIT, with a minor in mathematics. My focus was machine learning, especially natural language processing (NLP).</p>
-            <p class="intro-background">Now based in Bellevue, WA. Researcher, engineer, or foodie, depending on when you catch me.</p>
+            <p class="intro-background">Born and raised in Bangkok, Thailand. I spent my college years in Cambridge, MA, earning a BS and MEng in computer science at <a href="https://www.eecs.mit.edu/">MIT</a>, with a minor in mathematics. My focus was machine learning, especially natural language processing (NLP).</p>
+            <p class="intro-background">Now based in Bellevue, WA. Researcher, engineer, or <a href="#outside-work">foodie</a>, depending on when you catch me.</p>
 
           </div>
-          <section class="intro-honors" aria-label="International Chemistry Olympiad achievement">
-            <p class="honors-award">Two-time silver medalist <span class="honors-date">· 2018 &amp; 2019</span></p>
-            <a href="https://www.icho-official.org/results/country_info.php?country=Thailand">International Chemistry Olympiad (IChO) ↗</a>
+          <section class="intro-honors" aria-label="Olympiad honors">
+            <div>
+              <p class="honors-award">Two-time silver medalist <span class="honors-date">· 2018 &amp; 2019</span></p>
+              <a href="https://www.icho-official.org/results/country_info.php?country=Thailand">International Chemistry Olympiad (IChO) ↗</a>
+            </div>
+            <div>
+              <p class="honors-award">Gold medalist</p>
+              <p class="honors-competition">International Junior Science Olympiad (IJSO)</p>
+            </div>
           </section>
 
         </div>
@@ -42,10 +48,16 @@
       <section class="research-interests" aria-labelledby="interests-title">
         <h2 id="interests-title">My interests</h2>
         <div class="interest-columns">
-          <div><h3><span class="interest-index" aria-hidden="true">01</span>Alignment &amp; post-training</h3><p>I’m interested in building data-efficient post-training pipelines to align LLMs with specific use cases. My <mark class="text-highlight">hands-on research and engineering</mark> experience spans synthetic data, reward design, large-scale training environments, evals, and post-training with KD, SFT, and RL.</p></div>
-          <div><h3><span class="interest-index" aria-hidden="true">02</span>Multi-agent systems</h3><p>I also explore how multi-agent systems solve complex problems and scale with <mark class="text-highlight">test-time compute</mark>. For fun, I built an orchestrator for coding agents to manage multiple sessions, each with its own context, memory, and preferences. Another project explores how agents can simulate the way people work and collaborate in real life.</p></div>
+          <div>
+            <h3>Making AI actually useful</h3>
+            <p>I’m an AI researcher and engineer. I want to make AI useful in everyday work and make it easy for anyone to access and use. I approach that goal through <mark class="text-highlight">alignment and post-training</mark> research. Working on Microsoft 365 Copilot and TikTok Shop’s customer service AI made me want to own more of that process, from testing a research idea to shipping it and seeing how it helps customers.</p>
+          </div>
+          <div>
+            <h3>How I work</h3>
+            <p>I bring energy to my work and learn quickly, especially on fast-moving teams where people are excited to work together. I care about doing the work well and understanding the decisions behind it. I ask <mark class="text-highlight">“Why?”</mark> to get to the root of a problem, then <mark class="text-highlight">“What if?”</mark> to find an idea I can test. That’s how I get up to speed on new problems.</p>
+          </div>
         </div>
-        <p class="interest-connect">Always happy to connect and exchange ideas.</p>
+        <p class="interest-connect">I’m open to startup opportunities as a founding member of a team. If you’d like to talk, <a href="#contact">I’d be happy to connect</a>.</p>
       </section>
       <section id="about" class="section about" aria-labelledby="about-title">
         <div class="about-aside">
@@ -69,8 +81,10 @@
           <div id="experience" class="about-experience">
           <p class="eyebrow-label">Experience</p>
           <ol class="experience-list">
-            <li><p class="experience-date">Apr 2026–present</p><div><h3><img class="brand-logo" src="assets/microsoft.svg" alt="" width="24" height="24">Microsoft</h3><p class="experience-role">Machine Learning Applied Scientist</p><p class="experience-summary">LLM post-training and evaluation for Microsoft 365 Copilot.</p><details class="background-detail"><summary>More detail</summary><p class="body-copy">I’m currently working on <strong>large-scale LLM post-training</strong> (<strong>RLHF/RLVR</strong>) and <strong>knowledge distillation</strong> for Copilot in Microsoft 365 apps, with an emphasis on data, reward construction, and reinforcement learning environments. Past work includes agent evaluation and benchmarking.</p>
-              <p class="body-copy">Along the way, I also explore applications of <strong>multi-agent systems</strong>, especially real-world simulations, how their problem-solving abilities scale with <strong>test-time compute</strong>, and how to safely verify their work.</p></details></div></li>
+            <li><p class="experience-date">Apr 2026–present</p><div><h3><img class="brand-logo" src="assets/microsoft.svg" alt="" width="24" height="24">Microsoft</h3><p class="experience-role">Machine Learning Applied Scientist</p><p class="experience-summary">Training and evaluating language models for workflows across Microsoft 365 apps.</p><details class="background-detail"><summary>More detail</summary>
+              <p class="body-copy">I train <strong>sub-frontier language models</strong> to perform well on tasks that span Microsoft 365 apps such as Word, PowerPoint, and Excel. My work covers <strong>agentic mid-training and post-training</strong>, including supervised fine-tuning (SFT), on- and off-policy knowledge distillation, and reinforcement learning.</p>
+              <p class="body-copy">For <a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/">MAI Work Flash ↗</a>, I contributed to cross-app post-training. My main contributions include defining tasks and rewards, building synthetic training datasets, setting benchmark goals, evaluating model checkpoints, analyzing where models struggle, and contributing to reinforcement learning environments. We partnered with the MAI Super Intelligence team to incorporate our data into the broader training mix and recommend how to train on it. We also work closely with Microsoft 365 product teams to understand how each app works and how customers use it.</p>
+              <p class="body-copy">Earlier, I helped build and ship <a href="https://www.linkedin.com/posts/satyanadella_agent-mode-is-here-in-outlook-copilot-can-activity-7454646422165012480-Q1Be">Agent Mode in Outlook ↗</a>, built BERT and random forest classifiers for an LLM router, and developed a multi-agent system that iteratively refines its own work. I enjoy working across products because it helps me understand how customers use them and where we can make their work easier.</p></details></div></li>
             <li><p class="experience-date">Jul 2025–Apr 2026</p><div><h3><img class="brand-logo" src="assets/tiktok.svg" alt="" width="24" height="24">TikTok</h3><p class="experience-role">Machine Learning Applied Scientist</p><p class="experience-summary">Chatbot development and online evaluation for TikTok’s seller customer service.</p><details class="background-detail"><summary>More detail</summary><p class="body-copy">In customer service, issues can quickly affect customer satisfaction, so detecting and understanding them in production is essential. I developed features that <strong>connected different service domains</strong> within TikTok’s seller customer-service chatbot, giving users a unified experience. I also worked on <strong>online evaluation</strong>, using <strong>production experiments</strong> to guide decisions and quickly detect and analyze issues affecting the customer experience.</p></details></div></li>
             <li><p class="experience-date">Sep 2024–May 2025</p><div><h3><img class="brand-logo mit-logo" src="assets/mit.svg" alt="" width="24" height="24">MIT Edelman Lab</h3><p class="experience-role">Research Assistant</p><p class="experience-summary">Evaluation and gene attribution for single-cell foundation models.</p><details class="background-detail"><summary>More detail</summary><p class="body-copy">I researched how to capture the interplay between genotype and phenotype, advised by <a href="https://edelmanlab.mit.edu/elazer-edelman/">Prof. Elazer Edelman</a>. One approach involved training models and using <strong>explainable AI methods</strong> to visualize and interpret the relationships they learned. This included developing <strong>evaluation and gene-attribution methods</strong> for <strong>single-cell foundation models</strong>. I contributed to this research under the mentorship of Farhan Khodaee and Rohola Zandie, who later co-founded <a href="https://www.absentia.bio/">Absentia Labs</a>, building on this broader research direction.</p></details></div></li>
           </ol>
@@ -130,7 +144,7 @@
       </section>
 
     </main>
-    <footer><span>© 2026 big_thadawasin</span><span>Made with intention, Vibed by Codex</span><a href="#">Back to top ↑</a></footer>
+    <footer><span>© 2026 big_thadawasin</span><span class="footer-credit">Made with intention, Vibed by Codex <img src="assets/codex.svg" width="12" height="12" alt=""></span><a href="#">Back to top ↑</a></footer>
   </div>
   <script src="typing.js?v=20261025-name1"></script>
   <dialog id="photo-preview" class="photo-preview" aria-label="Food photo preview" aria-describedby="photo-preview-caption">

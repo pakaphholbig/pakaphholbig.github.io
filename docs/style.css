@@ -228,7 +228,6 @@ nav{font-size:14px;gap:24px}nav a{min-height:44px;display:inline-flex;align-item
 .about{grid-template-columns:1fr;gap:28px}
 .about .body-copy,.about .degree>p{max-width:70ch}
 
-.intro-credit{font-size:11px;margin-left:6px;white-space:nowrap}
 
 /* Compact background: scan summaries, expand supporting details. */
 .about .experience-list li{padding:20px 0;gap:24px}
@@ -262,7 +261,6 @@ nav{font-size:14px;gap:24px}nav a{min-height:44px;display:inline-flex;align-item
 /* Anchor desktop contact details to the bottom of the introduction. */
 @media(min-width:701px){.hero-contact{align-self:end}}
 
-.intro-credit img{display:inline-block;width:12px;height:12px;vertical-align:-2px;margin:0 2px;opacity:.65}
 
 @media(min-width:701px){.hero-bottom{padding-top:76px}}
 
@@ -312,6 +310,8 @@ header nav{margin-left:0;gap:24px}
 .intro-honors h2{font-size:12px;color:var(--muted);margin:0 0 8px}
 .hero-bottom .honors-award{font-size:18px;font-weight:600;color:var(--ink);line-height:1.4;margin:0 0 3px}
 .intro-honors a{display:inline-block;font-size:14px;line-height:1.6;padding:4px 0}
+.intro-honors > div + div{margin-top:10px}
+.intro-honors .honors-competition{font-size:14px;line-height:1.6;margin:0}
 .hero-bottom .honors-years{font-size:13px;line-height:1.6;margin-top:3px}
 .hero-bottom{gap:24px}
 
@@ -344,7 +344,6 @@ header nav{margin-left:0;gap:24px}
 .hero-title-group .intro-photo{width:240px;padding:0;border:0;border-radius:0;box-shadow:none;transform:none;background:transparent}
 .hero-title-group .intro-photo img{border-radius:0;aspect-ratio:1;object-position:center 60%}
 .intro-eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.intro-credit{font-size:10px;letter-spacing:0;text-transform:none}
 .research-interests{padding-top:28px;padding-bottom:32px}
 .research-interests>h2{font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:24px}
 .interest-columns{gap:36px;grid-template-columns:1fr 1fr}
@@ -370,7 +369,7 @@ header nav{margin-left:0;gap:24px}
 .magazine-opening .hero-bottom .intro-background+.intro-background{margin-top:22px;font-family:Georgia,'Times New Roman',serif;font-size:23px;line-height:1.4;color:var(--ink);letter-spacing:-.35px}
 .magazine-opening .intro-honors{padding:0;border:0}
 .magazine-opening .honors-award{font-size:16px}
-.magazine-opening .intro-honors a{font-size:13px}
+.magazine-opening .intro-honors :is(a,.honors-competition){font-size:13px}
 .magazine-opening .hero-contact{grid-area:contact;align-self:auto;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;align-items:start;gap:24px;width:100%;font-size:12px}
 .magazine-opening .hero-contact dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;flex:1;margin:0}
 .magazine-opening .hero-contact dl>div{display:block;margin:0}
@@ -380,8 +379,10 @@ header nav{margin-left:0;gap:24px}
 .magazine-opening .hero-socials a{min-height:32px;padding:2px 0}
 .magazine-opening .hero-socials .social-icon{width:14px;height:14px}
 @media(min-width:701px) and (max-width:1000px){.magazine-opening{column-gap:30px}.magazine-opening h1{font-size:54px}.magazine-opening .name-nickname{font-size:28px}.magazine-opening .intro-photo img{height:390px}.magazine-opening .hero-contact{display:block}.magazine-opening .hero-socials{flex-direction:row;gap:24px;margin-top:12px}}
-@media(max-width:700px){.magazine-opening{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "photo" "bio" "contact";gap:24px;padding:24px 0 30px}.magazine-opening .hero-title-group{max-width:none;padding-bottom:20px}.magazine-opening .intro-eyebrow{font-size:9px;gap:8px;margin-bottom:20px}.magazine-opening .intro-credit{font-size:9px;margin-left:0}.magazine-opening h1{display:block;font-size:clamp(36px,9vw,60px)}.magazine-opening .name-nickname{font-size:30px;margin:16px 0 0}.magazine-opening .intro-photo img{height:auto;aspect-ratio:1.12;object-position:center 58%}.magazine-opening .hero-bottom{padding:0;gap:22px}.magazine-opening .hero-bottom .intro-background{font-size:15px}.magazine-opening .hero-bottom .intro-background+.intro-background{font-size:23px}.magazine-opening .hero-contact{display:block}.magazine-opening .hero-contact dl{display:block}.magazine-opening .hero-contact dl>div{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;margin:0 0 12px}.magazine-opening .hero-contact dt{margin:0;line-height:1.9}.magazine-opening .hero-socials{flex-direction:row;gap:24px;margin-top:12px}.magazine-opening .hero-socials a{min-height:44px}}
+@media(max-width:700px){.magazine-opening{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "photo" "bio" "contact";gap:24px;padding:24px 0 30px}.magazine-opening .hero-title-group{max-width:none;padding-bottom:20px}.magazine-opening .intro-eyebrow{font-size:9px;gap:8px;margin-bottom:20px}.magazine-opening h1{display:block;font-size:clamp(36px,9vw,60px)}.magazine-opening .name-nickname{font-size:30px;margin:16px 0 0}.magazine-opening .intro-photo img{height:auto;aspect-ratio:1.12;object-position:center 58%}.magazine-opening .hero-bottom{padding:0;gap:22px}.magazine-opening .hero-bottom .intro-background{font-size:15px}.magazine-opening .hero-bottom .intro-background+.intro-background{font-size:23px}.magazine-opening .hero-contact{display:block}.magazine-opening .hero-contact dl{display:block}.magazine-opening .hero-contact dl>div{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;margin:0 0 12px}.magazine-opening .hero-contact dt{margin:0;line-height:1.9}.magazine-opening .hero-socials{flex-direction:row;gap:24px;margin-top:12px}.magazine-opening .hero-socials a{min-height:44px}}
 
 /* Let the biography read as one consistent piece of text. */
 .magazine-opening .hero-bottom .intro-background+.intro-background{margin-top:16px;font-family:inherit;font-size:16px;line-height:1.75;color:var(--muted);letter-spacing:normal}
 @media(max-width:700px){.magazine-opening .hero-bottom .intro-background+.intro-background{font-size:15px}}
+
+.footer-credit img{vertical-align:-2px;margin-left:2px}
